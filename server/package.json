@@ -5,9 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon index.js",
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d build"
+    "start": "node index.js"
+  
+   
   },
   "keywords": [],
   "author": "",
