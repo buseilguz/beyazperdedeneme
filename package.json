@@ -1,5 +1,9 @@
 {
+  "homepage": "https://buse.ilguz.github.io/beyazperdedeneme",
   "dependencies": {
     "mongoose": "^7.2.2"
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }

@@ -1,11 +1,13 @@
-{
+{ "homepage": "https://buse.ilguz.github.io/beyazperdedeneme",
   "name": "server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build"
   },
   "keywords": [],
   "author": "",
