@@ -10,7 +10,7 @@ import cors from 'cors'
 
 dotenv.config()
 const corsOptions = {
-    origin: "https://reactapp-frontend.onrender.com/,", // frontend URI (ReactJS)
+    origin: "https://reactapp-frontend.onrender.com/", // frontend URI (ReactJS)
 }
 const app=express()
 app.use(cors())
