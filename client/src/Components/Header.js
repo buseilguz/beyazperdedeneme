@@ -48,7 +48,7 @@ const Header =({user,setUser})=>{
           setUser(null)
         }} href='/news/getall'>Çıkış Yap</Button> : [
       <Button variant='success' >
-        <Link className='text-white text-decoration-none'  to='/signin'>Giriş Yap</Link>
+        <Link className='text-white text-decoration-none'  to='/news/getall'>Giriş Yap</Link>
         </Button>,
          <Button variant='success' >
         <Link className='text-white text-decoration-none'  to='/signup'>Hesap Oluştur</Link>
