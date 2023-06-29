@@ -33,9 +33,9 @@ const Header =({user,setUser})=>{
         <Nav className="me-auto">
           <Nav.Link className='text-white' >Filmler</Nav.Link>
           <Nav.Link className='text-white' >Seanslar</Nav.Link>
-          <Nav.Link className='text-white' to='/news/getall'>Haberler</Nav.Link>
+          <Nav.Link className='text-white' href='/news/getall'>Haberler</Nav.Link>
           <Nav.Link className='text-white' >Fragmanlar</Nav.Link>
-          <Nav.Link className='text-white' to='/tvseries/getall'>TV Dizileri</Nav.Link>
+          <Nav.Link className='text-white' href='/tvseries/getall'>TV Dizileri</Nav.Link>
          
             
          
