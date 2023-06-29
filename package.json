@@ -5,15 +5,6 @@
   },
   "devDependencies": {
     "gh-pages": "^5.0.0"
-  },
-  "scripts": {
-    "start": "node index.js",
-    "install-server": "cd backend && npm install",
-    "start-server": "cd backend && node app.js",
-    "install-client": "cd client && npm install",
-    "build-client": "cd client && npm run build",
-    "start-client": "cd client && npm run start"
-  
-   
   }
+  
 }
