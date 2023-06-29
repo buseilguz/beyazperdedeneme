@@ -11,7 +11,7 @@ const Newses = () => {
     useEffect(()=>{
         const fetchAllNews=async ()=>{
           try { 
-            const res=await axios.get("http://localhost:5000/news/getall")
+            const res=await axios.get("https://reactapp-0xe1.onrender.com/news/getall")
             setNewses(res.data);
             console.log(res)
         } catch (error) {

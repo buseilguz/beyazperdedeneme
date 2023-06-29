@@ -29,7 +29,7 @@ const handleChange=(e)=>{
 const handleClick=async e=>{
     e.preventDefault()
     try {
-        await axios.patch("http://localhost:5000/news/updatenews/"+newsId,news)
+        await axios.patch("https://reactapp-0xe1.onrender.com/news/updatenews/"+newsId,news)
         navigate("/news/getall")
     } catch (err) {
         console.log(err)
