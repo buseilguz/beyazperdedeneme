@@ -33,10 +33,13 @@ const Header =({user,setUser})=>{
         <Nav className="me-auto">
           <Nav.Link className='text-white' >Filmler</Nav.Link>
           <Nav.Link className='text-white' >Seanslar</Nav.Link>
-          <Nav.Link className='text-white' href='/news/getall'>Haberler</Nav.Link>
-          <Nav.Link className='text-white' >Fragmanlar</Nav.Link>
-          <Nav.Link className='text-white' href='/tvseries/getall'>TV Dizileri</Nav.Link>
-         
+          <Button variant='success' >
+        <Link className='text-white text-decoration-none'  to='/news/getall'>Haberler</Link>
+        </Button>         
+         <Nav.Link className='text-white' >Fragmanlar</Nav.Link>
+         <Button variant='success' >
+        <Link className='text-white text-decoration-none'  to='/tvseries/getall'>Tv Dizileri</Link>
+        </Button>           
             
          
         </Nav>
@@ -48,7 +51,7 @@ const Header =({user,setUser})=>{
           setUser(null)
         }} href='/news/getall'>Çıkış Yap</Button> : [
       <Button variant='success' >
-        <Link className='text-white text-decoration-none'  to='/news/getall'>Giriş Yap</Link>
+        <Link className='text-white text-decoration-none'  to='/signin'>Giriş Yap</Link>
         </Button>,
          <Button variant='success' >
         <Link className='text-white text-decoration-none'  to='/signup'>Hesap Oluştur</Link>
