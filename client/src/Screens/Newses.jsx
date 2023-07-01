@@ -12,6 +12,7 @@ const Newses = () => {
         const fetchAllNews=async ()=>{
           try { 
             const res=await axios.get("https://reactapp-0xe1.onrender.com/news/getall")
+           
             setNewses(res.data);
             console.log(res)
         } catch (error) {
@@ -38,7 +39,7 @@ const Newses = () => {
     <div >
     
        <Nav variant="pills" style={{position:'relative',left:250}} defaultActiveKey="/news/getall" expand="lg">
-       <Button variant="warning" href='/news/addnews' style={{position:'relative',left:-230,borderRadius:'95%'}}>Haber Ekle</Button>
+       <Button variant="warning" to='/news/addnews' style={{position:'relative',left:-230,borderRadius:'95%'}}>Haber Ekle</Button>
       <Nav.Item>
         <Nav.Link href="/news/getall">Tüm Haberler</Nav.Link>
       </Nav.Item>
