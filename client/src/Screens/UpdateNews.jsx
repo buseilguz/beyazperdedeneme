@@ -43,7 +43,7 @@ useEffect(()=>{
         const newsId=location.pathname.split("/")[3]
         console.log(newsId)   
       try { 
-        const res=await axios.get("http://localhost:5000/news/getnews/"+newsId)
+        const res=await axios.get("https://reactapp-0xe1.onrender.com/news/getnews/"+newsId)
         setNews(res.data);
         console.log(res)
     } catch (error) {
