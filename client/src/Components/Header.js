@@ -33,11 +33,11 @@ const Header =({user,setUser})=>{
         <Nav className="me-auto">
           <Nav.Link className='text-white' >Filmler</Nav.Link>
           <Nav.Link className='text-white' >Seanslar</Nav.Link>
-          <Button variant='success' >
+          <Button  >
         <Link className='text-white text-decoration-none'  to='/news/getall'>Haberler</Link>
         </Button>         
          <Nav.Link className='text-white' >Fragmanlar</Nav.Link>
-         <Button variant='success' >
+         <Button  >
         <Link className='text-white text-decoration-none'  to='/tvseries/getall'>Tv Dizileri</Link>
         </Button>           
             
