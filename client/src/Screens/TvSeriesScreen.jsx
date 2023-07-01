@@ -46,7 +46,10 @@ const TvSeriesScreen = () => {
     <div >
     
        <Nav variant="pills" style={{position:'relative',left:250}} defaultActiveKey="/tvseries/getall" expand="lg">
-       <Button variant="primary" to='/tvseries/addtvseries' style={{position:'relative',left:-230,borderRadius:'95%'}}>Dizi Ekle</Button>
+       <Button variant="primary" style={{position:'relative',left:-230,borderRadius:'95%'}}>
+       <Link className='text-white text-decoration-none'   to='/tvseries/addtvseries'>Dizi Ekle</Link> 
+
+     </Button>
       <Nav.Item>
         <Nav.Link href="/tvseries/getall">Tüm Diziler</Nav.Link>
       </Nav.Item>
