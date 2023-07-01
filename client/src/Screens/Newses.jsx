@@ -39,7 +39,7 @@ const Newses = () => {
     <div >
     
        <Nav variant="pills" style={{position:'relative',left:250}} defaultActiveKey="/news/getall" expand="lg">
-       <Button variant="warning" to='/news/addnews' style={{position:'relative',left:-230,borderRadius:'95%'}}>Haber Ekle</Button>
+       <Button variant="primary" to='/news/addnews' style={{position:'relative',left:-230,borderRadius:'95%'}}>Haber Ekle</Button>
       <Nav.Item>
         <Nav.Link href="/news/getall">Tüm Haberler</Nav.Link>
       </Nav.Item>
