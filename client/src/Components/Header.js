@@ -38,7 +38,7 @@ const Header =({user,setUser})=>{
         </Button>         
          <Nav.Link className='text-white' >Fragmanlar</Nav.Link>
          <Button  >
-        <Link className='text-white text-decoration-none'  to='/tvseries/getall'>Tv Dizileri</Link>
+        <Link className='text-white text-decoration-none' style={{backgroundColor:'blue'}} to='/tvseries/getall'>Tv Dizileri</Link>
         </Button>           
             
          
