@@ -26,7 +26,7 @@ const handleChange=(e)=>{
 const handleClick=async e=>{
     e.preventDefault()
     try {
-        await axios.post("http://localhost:5000/news/addnews",news)
+        await axios.post("https://reactapp-0xe1.onrender.com/news/addnews",news)
         navigate("/news/getall")
     } catch (err) {
         console.log(err)

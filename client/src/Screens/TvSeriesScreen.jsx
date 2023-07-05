@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react'
 import Nav from 'react-bootstrap/Nav';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
+
 
 
 const TvSeriesScreen = () => {
@@ -11,7 +13,7 @@ const TvSeriesScreen = () => {
     useEffect(()=>{
         const fetchAllSeries=async ()=>{
           try { 
-            const res=await axios.get("http://localhost:5000/tvseries/getall")
+            const res=await axios.get("https://reactapp-0xe1.onrender.com/tvseries/getall")
             setSeries(res.data);
            
         } catch (error) {
@@ -46,7 +48,10 @@ const TvSeriesScreen = () => {
     <div >
     
        <Nav variant="pills" style={{position:'relative',left:250}} defaultActiveKey="/tvseries/getall" expand="lg">
-       <Button variant="warning" href='/tvseries/addtvseries' style={{position:'relative',left:-230,borderRadius:'95%'}}>Dizi Ekle</Button>
+       <Button variant="primary" style={{position:'relative',left:-230,borderRadius:'95%'}}>
+       <Link className='text-white text-decoration-none'   to='/tvseries/addtvseries'>Dizi Ekle</Link> 
+
+     </Button>
       <Nav.Item>
         <Nav.Link href="/tvseries/getall">Tüm Diziler</Nav.Link>
       </Nav.Item>

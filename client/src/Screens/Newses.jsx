@@ -4,6 +4,8 @@ import Nav from 'react-bootstrap/Nav';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 
 const Newses = () => {
     const [newses,setNewses]=useState([])
@@ -11,7 +13,8 @@ const Newses = () => {
     useEffect(()=>{
         const fetchAllNews=async ()=>{
           try { 
-            const res=await axios.get("http://localhost:5000/news/getall")
+            const res=await axios.get("https://reactapp-0xe1.onrender.com/news/getall")
+           
             setNewses(res.data);
             console.log(res)
         } catch (error) {
@@ -38,7 +41,9 @@ const Newses = () => {
     <div >
     
        <Nav variant="pills" style={{position:'relative',left:250}} defaultActiveKey="/news/getall" expand="lg">
-       <Button variant="warning" href='/news/addnews' style={{position:'relative',left:-230,borderRadius:'95%'}}>Haber Ekle</Button>
+       <Button variant="primary"  style={{position:'relative',left:-230,borderRadius:'95%'}}>
+       <Link className='text-white text-decoration-none'  to='/news/addnews'>Haber Ekle</Link> 
+       </Button>
       <Nav.Item>
         <Nav.Link href="/news/getall">Tüm Haberler</Nav.Link>
       </Nav.Item>

@@ -5,5 +5,12 @@
   },
   "devDependencies": {
     "gh-pages": "^5.0.0"
+  },
+  "scripts": {
+    
+    "install-client": "cd client && npm install",
+    "build-client": "cd client && npm run build",
+    "start-client": "cd client && npm run start"
   }
+  
 }
