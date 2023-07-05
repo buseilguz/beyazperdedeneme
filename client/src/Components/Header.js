@@ -31,12 +31,17 @@ const Header =({user,setUser})=>{
           </Form>
 
         <Nav className="me-auto">
-          <Nav.Link className='text-white' >Filmler</Nav.Link>
-          <Nav.Link className='text-white' >Seanslar</Nav.Link>
-          <Button  >
+        <Button   style={{backgroundColor:'blue'}}>
+ <Nav.Link className='text-white' >Filmler</Nav.Link></Button>
+ <Button   style={{backgroundColor:'blue'}}>
+
+          <Nav.Link className='text-white' >Seanslar</Nav.Link></Button>
+          <Button   style={{backgroundColor:'blue'}}>
         <Link className='text-white text-decoration-none'  to='/news/getall'>Haberler</Link>
-        </Button>         
-         <Nav.Link className='text-white' >Fragmanlar</Nav.Link>
+        </Button>     
+        <Button   style={{backgroundColor:'blue'}}>
+    
+         <Nav.Link className='text-white' >Fragmanlar</Nav.Link></Button>
          <Button  style={{backgroundColor:'blue'}}>
         <Link className='text-white text-decoration-none'  to='/tvseries/getall'>Tv Dizileri</Link>
         </Button>           
