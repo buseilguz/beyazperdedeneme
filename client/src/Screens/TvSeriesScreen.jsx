@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 
 
 
+
 const TvSeriesScreen = () => {
     const [tvSeries,setSeries]=useState([])
 
@@ -53,7 +54,7 @@ const TvSeriesScreen = () => {
 
      </Button>
       <Nav.Item>
-        <Nav.Link to="/tvseries/getall" >Tüm Diziler</Nav.Link>
+        <Link to="/tvseries/getall" >Tüm Diziler</Link>
       </Nav.Item>
       <Nav.Item>
         <Nav.Link eventKey="link-1" onClick={()=>handleClick()}>En popüler Diziler</Nav.Link>
