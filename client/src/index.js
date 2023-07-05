@@ -3,14 +3,12 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import './bootstrap.min.css'
-import './Screens/Newses'
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
- <Newses/>
- root.render(
-    
+root.render(
+  
     <App />
-   
  
 );
 

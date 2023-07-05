@@ -22,7 +22,6 @@ function App() {
    <Router>
     <Header user={user} setUser={setUser}/>
     
-  
     <main className='py-3'>
       <Container>
         <Routes>

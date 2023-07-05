@@ -31,18 +31,13 @@ const Header =({user,setUser})=>{
           </Form>
 
         <Nav className="me-auto">
-        <Button   style={{backgroundColor:'blue',paddingRight:'5px'}}>
- <Nav.Link className='text-white' >Filmler</Nav.Link></Button>
- <Button   style={{backgroundColor:'blue'}}>
-
-          <Nav.Link className='text-white' >Seanslar</Nav.Link></Button>
-          <Button   style={{backgroundColor:'blue',paddingRight:'5px'}}>
+          <Nav.Link className='text-white' >Filmler</Nav.Link>
+          <Nav.Link className='text-white' >Seanslar</Nav.Link>
+          <Button  >
         <Link className='text-white text-decoration-none'  to='/news/getall'>Haberler</Link>
-        </Button>     
-        <Button   style={{backgroundColor:'blue',paddingRight:'5px'}}>
-    
-         <Nav.Link className='text-white' >Fragmanlar</Nav.Link></Button>
-         <Button  style={{backgroundColor:'blue',paddingRight:'5px'}}>
+        </Button>         
+         <Nav.Link className='text-white' >Fragmanlar</Nav.Link>
+         <Button  >
         <Link className='text-white text-decoration-none'  to='/tvseries/getall'>Tv Dizileri</Link>
         </Button>           
             
