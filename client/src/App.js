@@ -21,7 +21,7 @@ function App() {
   return (
    <Router>
     <Header user={user} setUser={setUser}/>
-    
+    <Newses/>
     <main className='py-3'>
       <Container>
         <Routes>
