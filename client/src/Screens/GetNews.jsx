@@ -33,7 +33,7 @@ const GetNews = () => {
 
     const handleDelete=async (id)=>{
       try {
-        await axios.delete("http://localhost:5000/news/deletenews/"+id)
+        await axios.delete("https://reactapp-0xe1.onrender.com/news/deletenews/"+id)
         window.location.reload()
       } catch (err) {
         console.log(err)
