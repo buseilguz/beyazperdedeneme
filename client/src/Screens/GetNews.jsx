@@ -30,17 +30,18 @@ const GetNews = () => {
         }
         fetchAllNews()
     },[])
+     const navigate=useNavigate()
 
     const handleDelete=async (id)=>{
       try {
         await axios.delete("https://reactapp-0xe1.onrender.com/news/deletenews/"+id)
-        window.location.reload()
+        navigate("/news/getall")
       } catch (err) {
         console.log(err)
       }
     }
 
-    const navigate=useNavigate()
+   
      const handleClick=async (id)=>{
        
         try {
