@@ -29,19 +29,17 @@ const TvSeriesScreen = () => {
 
   
     const HandleClick= ()=>{
-       
-      useEffect(()=>{
-        const fetchAllSeries=async ()=>{
-          try { 
-            const res=await axios.get("https://reactapp-0xe1.onrender.com/tvseries/getpopuler")
-            setSeries(res.data);
-           
-        } catch (error) {
-            console.log(error)
-          }  
-        }
+      const fetchAllSeries=async ()=>{
+        try { 
+          const res=await axios.get("https://reactapp-0xe1.onrender.com/tvseries/getall")
+          setSeries(res.data);
+         
+      } catch (error) {
+          console.log(error)
+        }  
         fetchAllSeries()
-    },[])
+      }
+    
      }
     
    
