@@ -21,7 +21,7 @@ await HTTP.get('news/getall',formData);
 export const getallseries= async(formData)=>
 await HTTP.get('tvseries/getall',formData);
 
-export const getallpopuler= async(formData)=>
+export const getpopuler= async(formData)=>
 await HTTP.get('tvseries/getpopuler',formData);
 
 export const getnews= async(formData)=>
