@@ -30,17 +30,19 @@ const TvSeriesScreen = () => {
   
     const handleClick= ()=>{
        
-        try {
-            setSeries(tvSeries.filter(
-         m=>m.views >=5
-         
-             ))
-             console.log(tvSeries)
-             
-        } catch (err) {
-            console.log(err)
+      useEffect(()=>{
+        const fetchAllSeries=async ()=>{
+          try { 
+            const res=await axios.get("https://reactapp-0xe1.onrender.com/tvseries/getpopuler")
+            setSeries(res.data);
+           
+        } catch (error) {
+            console.log(error)
+          }  
         }
-    }
+        fetchAllSeries()
+    },[])
+     }
     
    
    

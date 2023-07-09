@@ -26,6 +26,11 @@ router.get('/getall',async(req,res)=>{
 })
 
 
+router.get('/getpopuler',async(req,res)=>{
+    const tvSeries=await TvSeries.find({views: { $gte: 5 }}).sort({createdAt: -1})
+    res.status(200).json(tvSeries)
+})
+
 
 
 
