@@ -23,6 +23,16 @@ const TvSeriesScreen = () => {
         }
         fetchAllSeries()
     },[])
+    const handleClick2= ()=>{
+       
+      try {
+          setSeries(tvSeries)
+           
+      } catch (err) {
+          console.log(err)
+      }
+  }
+  
 
 
   
@@ -54,7 +64,7 @@ const TvSeriesScreen = () => {
 
      </Button>
       <Nav.Item>
-        <Nav.Link eventKey="link-1" to="/tvseries/getall" >Tüm Diziler</Nav.Link>
+        <Nav.Link eventKey="link-2" onClick={()=>handleClick2()} >Tüm Diziler</Nav.Link>
       </Nav.Item>
       <Nav.Item>
         <Nav.Link eventKey="link-1" onClick={()=>handleClick()}>En popüler Diziler</Nav.Link>
