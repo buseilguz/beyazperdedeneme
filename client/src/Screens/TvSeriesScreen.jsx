@@ -31,7 +31,7 @@ const TvSeriesScreen = () => {
     const HandleClick= ()=>{
       const fetchAllSeries=async ()=>{
         try { 
-          const res=await axios.get("https://reactapp-0xe1.onrender.com/tvseries/getall")
+          const res=await axios.get("https://reactapp-0xe1.onrender.com/tvseries/getpopuler")
           setSeries(res.data);
          
       } catch (error) {
