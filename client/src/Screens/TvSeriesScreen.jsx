@@ -54,7 +54,7 @@ const TvSeriesScreen = () => {
 
      </Button>
       <Nav.Item>
-        <Link to="/tvseries/getall" >Tüm Diziler</Link>
+        <Nav.Link to="/tvseries/getall" >Tüm Diziler</Nav.Link>
       </Nav.Item>
       <Nav.Item>
         <Nav.Link eventKey="link-1" onClick={()=>handleClick()}>En popüler Diziler</Nav.Link>
