@@ -26,7 +26,8 @@ const TvSeriesScreen = () => {
     const handleClick2= ()=>{
        
       try {
-          setSeries(tvSeries)
+          setSeries(tvSeries.filter(m=>m >=0))
+          console.log(tvSeries)
            
       } catch (err) {
           console.log(err)
