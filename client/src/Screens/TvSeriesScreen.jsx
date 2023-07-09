@@ -29,17 +29,17 @@ const TvSeriesScreen = () => {
 
   
     const handleClick= ()=>{
-      const fetchAllSeries=async ()=>{
-        try { 
-          const res=await axios.get("https://reactapp-0xe1.onrender.com/tvseries/getpopuler")
-          setSeries(res.data);
+       
+       try {
+            setSeries(tvSeries.filter(
+      m=>m.views >=5
          
-      } catch (error) {
-          console.log(error)
-        }  
-        fetchAllSeries()
-      }
-    
+           ))
+             console.log(tvSeries)
+             
+        } catch (err) {
+            console.log(err)
+         }
      }
     
    
@@ -56,7 +56,8 @@ const TvSeriesScreen = () => {
 
      </Button>
       <Nav.Item>
-        <Nav.Link eventKey="link-2" to='/tvseries/getall' >Tüm Diziler</Nav.Link>
+        <Button> <Link eventKey="link-2" to='/tvseries/getall'  >Tüm Diziler</Link></Button>
+       
       </Nav.Item>
       <Nav.Item>
         <Nav.Link eventKey="link-1" onClick={()=>handleClick()}>En popüler Diziler</Nav.Link>
