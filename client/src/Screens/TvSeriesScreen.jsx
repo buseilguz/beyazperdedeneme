@@ -23,16 +23,7 @@ const TvSeriesScreen = () => {
         }
         fetchAllSeries()
     },[])
-    const handleClick2= ()=>{
-       
-      try {
-          setSeries(tvSeries.filter(m=>m >=0))
-          console.log(tvSeries)
-           
-      } catch (err) {
-          console.log(err)
-      }
-  }
+   
   
 
 
@@ -65,7 +56,7 @@ const TvSeriesScreen = () => {
 
      </Button>
       <Nav.Item>
-        <Nav.Link eventKey="link-2" onClick={()=>handleClick2()} >Tüm Diziler</Nav.Link>
+        <Nav.Link eventKey="link-2" onClick={()=>fetchAllSeries()} >Tüm Diziler</Nav.Link>
       </Nav.Item>
       <Nav.Item>
         <Nav.Link eventKey="link-1" onClick={()=>handleClick()}>En popüler Diziler</Nav.Link>
