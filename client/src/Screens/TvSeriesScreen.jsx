@@ -44,16 +44,7 @@ const TvSeriesScreen = () => {
     
      const handleClick2= ()=>{
        
-      try {
-           setSeries(tvSeries.filter(
-     m=>m.views >=0
-        
-          ))
-            console.log(tvSeries)
-            
-      } catch (err) {
-           console.log(err)
-       }
+      window.location.reload()
     }
    
    
