@@ -48,7 +48,7 @@ router.post("/signin",async(req,res)=>{
         return res.status(200).json({user,message:"Authentication successful"})
     } catch (error) {
         return res.status(400).json({message: error.message})
-    }
+    } 
 })
 
 
