@@ -10,8 +10,8 @@ import Form from 'react-bootstrap/Form';
 const Header =({user,setUser})=>{
   useEffect(()=>{
     try {
-      if (user !=null) {
-      setUser(user);
+      if (localStorage.getItem('user')&& !user) {
+      setUser(JSON.parse(localStorage.getItem('user')));
     }
     } catch (error) {
       console.log(user)
