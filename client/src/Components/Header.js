@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect,useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/esm/Button';
 import Nav from 'react-bootstrap/Nav';
@@ -6,13 +6,13 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from 'react-router-dom';
 import Form from 'react-bootstrap/Form';
-
+const [user, setUser] = useState(null);
 const Header =({user,setUser})=>{
   useEffect(()=>{
     if (localStorage.getItem('user')&& !user) {
       setUser(JSON.parse(localStorage.getItem('user')));
     }
-  },[user]);
+  },[user,setUser]);
     return (  <Navbar className="py-4 " bg="primary" expand="lg">
     <Container className='py-1' >
       <Navbar.Brand className='text-white ' href="#home"> <div class="logo"><img class="header-main-logo-img"
