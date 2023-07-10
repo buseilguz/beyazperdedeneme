@@ -9,9 +9,14 @@ import Form from 'react-bootstrap/Form';
 
 const Header =({user,setUser})=>{
   useEffect(()=>{
-    if (localStorage.getItem('user')&& !user) {
+    try {
+      if (localStorage.getItem('user')&& !user) {
       setUser(JSON.parse(localStorage.getItem('user')));
     }
+    } catch (error) {
+      console.log(user)
+    }
+    
   },[user,setUser]);
     return (  <Navbar className="py-4 " bg="primary" expand="lg">
     <Container className='py-1' >
