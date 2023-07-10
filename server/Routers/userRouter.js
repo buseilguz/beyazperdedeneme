@@ -51,4 +51,20 @@ router.post("/signin",async(req,res)=>{
     }
 })
 
+
+router.patch("/resetpassword",async(req,res)=>{
+    try {
+        const {email,password}=req.body;
+        const hashedPassword=await bcrypt.hash(password,10)
+        const user =await User.findOneAndUpdate({email},{
+            password:hashedPassword
+        })
+        if(!user)
+        return res.status(400).json( {message: "user does not exist"})
+
+        return res.status(200).json({user,message:"Şifreniz başarıyla değiştirildi."})
+    } catch (error) {
+        return res.status(400).json({message: error.message})
+    }
+})
 export default router;
