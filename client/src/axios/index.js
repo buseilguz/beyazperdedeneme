@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const HTTP=axios.create({
-    baseURL: 'https://reactapp-0xe1.onrender.com/',
+    baseURL: process.env.REACT_APP_BACKEND_URL,
 })
 export const login=async(formData)=> 
 await HTTP.post('users/signin',formData);
