@@ -6,7 +6,7 @@ import toast from 'react-hot-toast'
 import resim1 from '../images/Ekran Alıntısı.png'
 import LoginButton from '../Components/loginWithGoogle';
 import LogoutButton from '../Components/logout';
-import { gapi } from 'gapi-script';
+
 
 const SignInScreen=({setUser})=>{
     const navigate=useNavigate();
