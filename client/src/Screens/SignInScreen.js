@@ -17,15 +17,33 @@ const SignInScreen=({setUser})=>{
         email:"",
         password:""
     })
-    useEffect(()=>{
-        function start(){
-          gapi.client.init({
-            clientId:clientId,
-            scope:""
-          })
+    useEffect(() => {
+        const loadGoogleAPI = async () => {
+          await new Promise((resolve, reject) => {
+            const script = document.createElement('script');
+            script.src = 'https://apis.google.com/js/api.js';
+            script.onload = resolve;
+            script.onerror = reject;
+            document.body.appendChild(script);
+          });
+      
+          // Google API Client'ı başlat
+          window.gapi.load('client:auth2', () => {
+            window.gapi.client.init({
+              clientId: clientId,
+              scope: ''
+            })
+            .then(() => {
+              console.log('Google API Client initialized');
+            })
+            .catch((error) => {
+              console.log('Error initializing Google API Client:', error);
+            });
+          });
         };
-        gapi.load('client:auth2',start)
-      })
+      
+        loadGoogleAPI();
+      }, []);
 
     return (
     <Container>
