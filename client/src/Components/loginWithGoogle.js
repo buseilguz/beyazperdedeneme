@@ -22,7 +22,7 @@ function LoginWithGoogle(){
         
         <GoogleLogin
             clientId="730786986543-r0o4f13rg4d53orkufvoq4hk2eah16u7.apps.googleusercontent.com"
-            buttonText="Login"
+            buttonText="Google ile giriş yap"
             onSuccess={onSuccess}
             onFailure={onFailure}
             cookiePolicy={'single_host_origin'}
