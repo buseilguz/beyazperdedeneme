@@ -119,7 +119,7 @@ const SignInScreen = ({ setUser }) => {
           <Button onClick={() => setUser2(null)}>Logout</Button>
         </div>
       ) : (
-        <div style={{ position: "relative", right: "30px" }}>
+        <div style={{ position: "relative", right: "-30px" }}>
         <GoogleLogin
           clientId={clientId}
           buttonText="Login with Google"
