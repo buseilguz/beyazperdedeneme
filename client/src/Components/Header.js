@@ -5,7 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 import Form from 'react-bootstrap/Form';
-
+import { gapi } from 'gapi-script'
 
 
 const clientId="730786986543-r0o4f13rg4d53orkufvoq4hk2eah16u7.apps.googleusercontent.com";
