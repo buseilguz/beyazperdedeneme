@@ -7,11 +7,13 @@ import resim1 from "../images/Ekran Alıntısı.png";
 import { gapi } from "gapi-script";
 import { GoogleLogout} from 'react-google-login';
 import { GoogleLogin} from "react-google-login";
-
+import { useLocation, useNavigate} from "react-router-dom";
 const clientId =
   "730786986543-r0o4f13rg4d53orkufvoq4hk2eah16u7.apps.googleusercontent.com";
 
 const SignInScreen = ({ setUser }) => {
+
+  
    
         const [user2, setUser2] = useState(null);
       
@@ -41,6 +43,16 @@ const SignInScreen = ({ setUser }) => {
     password: "",
   });
 
+
+  const handleClick=async e=>{
+    e.preventDefault()
+    try {
+        
+        navigate("/news/getall")
+    } catch (err) {
+        console.log(err)
+    }
+}
   return (
     <Container>
       <Row className="justify-content-center">
@@ -127,7 +139,7 @@ const SignInScreen = ({ setUser }) => {
           onFailure={onFailure}
           cookiePolicy={'single_host_origin'}
           size="lg"
-          to="/"
+          onClick={handleClick}
           
 
         />
