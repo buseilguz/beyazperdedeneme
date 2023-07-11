@@ -113,7 +113,7 @@ const SignInScreen = ({ setUser }) => {
               </Button>
               <div>
       {user2 ? (
-        <div>
+        <div >
           
           <Button onClick={() => setUser2(null)}>Logout</Button>
         </div>
@@ -124,6 +124,9 @@ const SignInScreen = ({ setUser }) => {
           onSuccess={onSuccess}
           onFailure={onFailure}
           cookiePolicy={'single_host_origin'}
+          size="lg"
+          style={{ justifyContent: "center", alignItems: "center" }}
+
         />
       )}
     </div>
