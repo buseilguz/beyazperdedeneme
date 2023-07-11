@@ -112,6 +112,7 @@ const SignInScreen = ({ setUser }) => {
                 Giriş Yap
               </Button>
               <div>
+                <br/>
       {user2 ? (
         <div >
           
@@ -125,7 +126,7 @@ const SignInScreen = ({ setUser }) => {
           onFailure={onFailure}
           cookiePolicy={'single_host_origin'}
           size="lg"
-          style={{ justifyContent: "center", alignItems: "center" }}
+          style={{ position: "relative", right: "30%" }}
 
         />
       )}
