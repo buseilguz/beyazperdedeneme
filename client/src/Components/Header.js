@@ -5,9 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 import Form from 'react-bootstrap/Form';
-import { gapi } from 'gapi-script'
-import LoginButton from '../Components/loginWithGoogle';
-import LogoutButton from '../Components/logout';
+
 
 const clientId="730786986543-r0o4f13rg4d53orkufvoq4hk2eah16u7.apps.googleusercontent.com";
 
@@ -24,15 +22,7 @@ const Header =({user,setUser})=>{
   },[user,setUser]);
   
 
-  useEffect(()=>{
-    function start(){
-      gapi.client.init({
-        clientId:clientId,
-        scope:""
-      })
-    };
-    gapi.load('client:auth2',start)
-  })
+  
     return (  <Navbar className="py-4 " bg="primary" expand="lg">
     <Container className='py-1' >
       <Navbar.Brand className='text-white ' href="#home"> <div class="logo"><img class="header-main-logo-img"
@@ -82,8 +72,7 @@ const Header =({user,setUser})=>{
         <Link className='text-white text-decoration-none'  to='/signup'>Hesap Oluştur</Link>
         </Button>]}
 
-        <LoginButton variant='success'/>
-        <LogoutButton/>
+        
        
       </Navbar.Collapse>
       

@@ -4,10 +4,24 @@ import { Link,useNavigate } from "react-router-dom";
 import { login } from "../axios";
 import toast from 'react-hot-toast'
 import resim1 from '../images/Ekran Alıntısı.png'
-
+import { gapi } from 'gapi-script'
+import LoginButton from '../Components/loginWithGoogle';
+import LogoutButton from '../Components/logout';
+const clientId="730786986543-r0o4f13rg4d53orkufvoq4hk2eah16u7.apps.googleusercontent.com";
 
 
 const SignInScreen=({setUser})=>{
+
+    useEffect(()=>{
+        function start(){
+          gapi.client.init({
+            clientId:clientId,
+            scope:""
+          })
+        };
+        gapi.load('client:auth2',start)
+      })
+
     const navigate=useNavigate();
     const [formData,setFormData]=useState({
         email:"",
@@ -52,7 +66,8 @@ const SignInScreen=({setUser})=>{
                     <Form.Group className="d-grid"> 
                     <Button disabled={formData.email===""||formData.password===""}  type="submit" variant="primary"  size="lg">Giriş Yap</Button>
                     
-                
+                    <LoginButton />
+                    <LogoutButton/>
                     <Form.Text className="text-center mt-2">Bir hesabınız yok mu?
                      <Link to="/signup">Üye ol</Link>   
                     </Form.Text>
