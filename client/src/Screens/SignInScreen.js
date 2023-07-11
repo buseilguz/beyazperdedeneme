@@ -5,11 +5,7 @@ import { login } from "../axios";
 import toast from 'react-hot-toast'
 import resim1 from '../images/Ekran Alıntısı.png'
 
-import LoginButton from '../Components/loginWithGoogle';
-import LogoutButton from '../Components/logout';
-import { gapi } from 'gapi-script';
 
-const clientId="730786986543-r0o4f13rg4d53orkufvoq4hk2eah16u7.apps.googleusercontent.com";
 
 const SignInScreen=({setUser})=>{
     const navigate=useNavigate();
@@ -17,33 +13,6 @@ const SignInScreen=({setUser})=>{
         email:"",
         password:""
     })
-    useEffect(() => {
-        const loadGoogleAPI = async () => {
-          await new Promise((resolve, reject) => {
-            const script = document.createElement('script');
-            script.src = 'https://apis.google.com/js/api.js';
-            script.onload = resolve;
-            script.onerror = reject;
-            document.body.appendChild(script);
-          });
-      
-          // Google API Client'ı başlat
-          window.gapi.load('client:auth2', () => {
-            window.gapi.client.init({
-              clientId: clientId,
-              scope: ''
-            })
-            .then(() => {
-              console.log('Google API Client initialized');
-            })
-            .catch((error) => {
-              console.log('Error initializing Google API Client:', error);
-            });
-          });
-        };
-      
-        loadGoogleAPI();
-      }, []);
 
     return (
     <Container>
@@ -83,10 +52,7 @@ const SignInScreen=({setUser})=>{
                     <Form.Group className="d-grid"> 
                     <Button disabled={formData.email===""||formData.password===""}  type="submit" variant="primary"  size="lg">Giriş Yap</Button>
                     
-                     <LoginButton/>
-                     <LogoutButton/>
-                    <LoginButton/>
-                    <LogoutButton/>
+                
                     <Form.Text className="text-center mt-2">Bir hesabınız yok mu?
                      <Link to="/signup">Üye ol</Link>   
                     </Form.Text>
