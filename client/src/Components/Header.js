@@ -3,15 +3,14 @@ import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/esm/Button';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from 'react-router-dom';
 import Form from 'react-bootstrap/Form';
 
 const Header =({user,setUser})=>{
   useEffect(()=>{
     try {
-      if (localStorage.getItem('user')&& !user) {
-      setUser(JSON.parse(localStorage.getItem('user')));
+      if (!user) {
+      console.log("user yok")
     }
     } catch (error) {
       console.log(user)
@@ -57,7 +56,7 @@ const Header =({user,setUser})=>{
         
         {
         user ? <Button variant='outline-light' onClick={(e)=>{
-          localStorage.removeItem("user");
+          
           setUser(null)
         }} href='/news/getall'>Çıkış Yap</Button> : [
       <Button variant='success' >
