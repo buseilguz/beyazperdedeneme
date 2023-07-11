@@ -131,7 +131,7 @@ const SignInScreen = ({ setUser }) => {
           <Button onClick={() => setUser2(null)}>Logout</Button>
         </div>
       ) : (
-        <span  style={{ position: "relative", right: "-30px" }}>
+        <span  >
         <GoogleLogin
           clientId={clientId}
           buttonText="Login with Google"
@@ -140,7 +140,7 @@ const SignInScreen = ({ setUser }) => {
           cookiePolicy={'single_host_origin'}
           size="lg"
           onClick={handleClick}
-          
+          style={{ position: "relative", right: "-30px !important" }}
 
         />
         </span>
