@@ -9,8 +9,9 @@ import Form from 'react-bootstrap/Form';
 const Header =({user,setUser})=>{
   useEffect(()=>{
     try {
-      if (!user) {
-      console.log("user yok")
+      setUser(user)
+      if (user) {
+      console.log("user var")
     }
     } catch (error) {
       console.log(user)
