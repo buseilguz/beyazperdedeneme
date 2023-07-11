@@ -12,9 +12,9 @@ function LoginWithGoogle(){
 
     return(
         <div id="signInButton">
-          <GoogleOAuthProvider>
+          <GoogleOAuthProvider clientId={clientId}>
         <GoogleLogin
-            clientId={clientId}
+           
             buttonText="Login"
             onSuccess={onSuccess}
             onFailure={onFailure}
