@@ -119,7 +119,7 @@ const SignInScreen = ({ setUser }) => {
           <Button onClick={() => setUser2(null)}>Logout</Button>
         </div>
       ) : (
-        <div style={{ position: "relative", right: "-30px" }}>
+        <Button type="submit" style={{ position: "relative", right: "-30px" }}>
         <GoogleLogin
           clientId={clientId}
           buttonText="Login with Google"
@@ -130,7 +130,7 @@ const SignInScreen = ({ setUser }) => {
           
 
         />
-        </div>
+        </Button>
       )}
     </div>
               <Form.Text className="text-center mt-2">
