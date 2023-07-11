@@ -7,7 +7,7 @@ import resim1 from '../images/Ekran Alıntısı.png'
 import LoginButton from '../Components/loginWithGoogle';
 import LogoutButton from '../Components/logout';
 import { gapi } from 'gapi-script';
-
+const clientId="730786986543-r0o4f13rg4d53orkufvoq4hk2eah16u7.apps.googleusercontent.com";
 const SignInScreen=({setUser})=>{
     const navigate=useNavigate();
     const [formData,setFormData]=useState({
