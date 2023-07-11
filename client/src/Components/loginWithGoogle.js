@@ -12,6 +12,7 @@ function LoginWithGoogle(){
 
     return(
         <div id="signInButton">
+          <GoogleOAuthProvider>
         <GoogleLogin
             clientId={clientId}
             buttonText="Login"
@@ -19,7 +20,7 @@ function LoginWithGoogle(){
             onFailure={onFailure}
             cookiePolicy={'single_host_origin'}
             isSignedIn={true}
-        ></GoogleLogin>
+        ></GoogleLogin></GoogleOAuthProvider>
         </div>
     )
 
