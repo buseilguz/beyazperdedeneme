@@ -114,8 +114,8 @@ const SignInScreen = ({ setUser }) => {
               <div>
       {user2 ? (
         <div>
-          <p>Welcome, {user2.name}</p>
-          <button onClick={() => setUser2(null)}>Logout</button>
+          
+          <Button onClick={() => setUser2(null)}>Logout</Button>
         </div>
       ) : (
         <GoogleLogin
