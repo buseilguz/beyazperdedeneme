@@ -19,6 +19,12 @@ const SignInScreen = ({ setUser }) => {
       
         const onSuccess = (response) => {
           console.log('Login Successful', response.profileObj);
+          try {
+        
+            navigate("/news/getall")
+        } catch (err) {
+            console.log(err)
+        }
           setUser(response.profileObj);
         };
       
@@ -44,15 +50,7 @@ const SignInScreen = ({ setUser }) => {
   });
 
 
-  const handleClick=async e=>{
-    e.preventDefault()
-    try {
-        
-        navigate("/news/getall")
-    } catch (err) {
-        console.log(err)
-    }
-}
+ 
   return (
     <Container>
       <Row className="justify-content-center">
@@ -134,13 +132,13 @@ const SignInScreen = ({ setUser }) => {
         <span  >
         <GoogleLogin
           clientId={clientId}
-          buttonText="Login with Google"
+          buttonText="Google ile oturum aç"
           onSuccess={onSuccess}
           onFailure={onFailure}
           cookiePolicy={'single_host_origin'}
-          size="lg"
-          onClick={handleClick}
-          style={{ position: "relative", right: "-30px !important" }}
+          size="xl"
+         
+          style={{ position: "relative !important", right: "-30px !important" }}
 
         />
         </span>
