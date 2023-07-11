@@ -11,12 +11,12 @@ function Logout(){
     return(
         <div id="signoutButton">
             <GoogleOAuthProvider clientId={clientId}>
-        <googleLogout
+       <googleLogout
            
             buttonText="Logout"
             onSuccess={onSuccess}
             
-        /></GoogleOAuthProvider>
+        ></googleLogout></GoogleOAuthProvider>
         </div>
     )
 

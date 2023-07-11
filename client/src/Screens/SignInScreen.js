@@ -1,15 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {Container,Form,Button,Row,Col, FormGroup} from "react-bootstrap"
 import { Link,useNavigate } from "react-router-dom";
 import { login } from "../axios";
 import toast from 'react-hot-toast'
 import resim1 from '../images/Ekran Alıntısı.png'
+import LoginButton from '../Components/loginWithGoogle';
+import LogoutButton from '../Components/logout';
+import { gapi } from 'gapi-script';
+
 const SignInScreen=({setUser})=>{
     const navigate=useNavigate();
     const [formData,setFormData]=useState({
         email:"",
         password:""
     })
+
+    useEffect(()=>{
+        function start(){
+          gapi.client.init({
+            clientId:clientId,
+            scope:""
+          })
+        };
+        gapi.load('client:auth2',start)
+      })
     return (
     <Container>
        
@@ -47,6 +61,9 @@ const SignInScreen=({setUser})=>{
                     </Form.Group>
                     <Form.Group className="d-grid"> 
                     <Button disabled={formData.email===""||formData.password===""}  type="submit" variant="primary"  size="lg">Giriş Yap</Button>
+                    
+                    <LoginButton/>
+                    <LogoutButton/>
                     <Form.Text className="text-center mt-2">Bir hesabınız yok mu?
                      <Link to="/signup">Üye ol</Link>   
                     </Form.Text>
