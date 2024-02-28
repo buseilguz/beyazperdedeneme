@@ -23,4 +23,6 @@ beyazperde.com sitesi baz alınarak hazırlanmış bir projedir.
     
   ``` cd client```
     ``` npm start```
+# geliştirici dokümanı için :
+https://app.gitbook.com/o/PobvYmpXUEystWHSsvDl/s/BQd5hrWEd3r4XStwg7oM/buse-ilguez/gelistirici-dokuemani
    
