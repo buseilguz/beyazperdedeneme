@@ -5,11 +5,11 @@ beyazperde.com sitesi baz alınarak hazırlanmış bir projedir.
 
 # beyazperde-teknolojilerimiz
 
-Frontend : React
-Backend : Node.js && Express
-Veritabanı : MongoDB
-REST-API & Axios
-Test: Thunder Client
+<p>Frontend : React</p>
+<p>Backend : Node.js && Express</p>
+<p>Veritabanı : MongoDB</p>
+<p>REST-API & Axios</p>
+<p>Test: Thunder Client</p>
 
 # projeyi kullanabilmek için:
 
